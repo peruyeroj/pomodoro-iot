@@ -17,6 +17,9 @@ web/*.local
 device/__pycache__/
 device/config.py
 
+# Claude
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

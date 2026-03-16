@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(ls -la C:/Users/Josep/Desktop/Dev/pomodoro/.env* 2>/dev/null || echo \"no .env files\")",
-      "Bash(cd C:/Users/Josep/Desktop/Dev/pomodoro && npm install @supabase/supabase-js)",
-      "Bash(cd:*)"
-    ]
-  }
-}
