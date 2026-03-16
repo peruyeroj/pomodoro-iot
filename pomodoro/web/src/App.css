@@ -531,6 +531,53 @@
   text-decoration: underline;
 }
 
+/* ── Device registration ── */
+.nav-cta--ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.nav-cta--ghost:hover {
+  background: var(--surface);
+}
+
+.device-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.device-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.device-mac {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.device-remove {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.device-remove:hover {
+  color: var(--red-light);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .hero {

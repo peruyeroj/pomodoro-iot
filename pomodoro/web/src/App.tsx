@@ -2,10 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import { useAuth } from './context/AuthContext'
 import AuthForm from './components/AuthForm'
+import DeviceRegistration from './components/DeviceRegistration'
 
 function App() {
   const { user, loading, signOut } = useAuth()
   const [showAuth, setShowAuth] = useState(false)
+  const [showDevices, setShowDevices] = useState(false)
 
   if (loading) {
     return (
@@ -25,6 +27,7 @@ function App() {
         {user ? (
           <div className="nav-user">
             <span className="nav-email">{user.email}</span>
+            <button className="nav-cta nav-cta--ghost" onClick={() => setShowDevices(true)}>Devices</button>
             <button className="nav-cta" onClick={signOut}>Sign out</button>
           </div>
         ) : (
@@ -96,6 +99,7 @@ function App() {
       </footer>
 
       {showAuth && <AuthForm onClose={() => setShowAuth(false)} />}
+      {showDevices && <DeviceRegistration onClose={() => setShowDevices(false)} />}
     </div>
   )
 }
